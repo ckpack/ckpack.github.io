@@ -44,13 +44,13 @@ const list = [{
 <template>
   <div class="w-full bg-black z-9 p-y-24">
     <div class="tial-content max-w-1200px flex m-auto">
-      <div class="tial-main">
+      <div class="tial-main max-md:p-x-6">
         <div v-for="item in list" :key="item.title" class="bottombar-wrapper">
-          <div class="title color-white">
+          <div class="text-5 color-white">
             {{ item.title }}
           </div>
-          <div class="bar-list color-gray">
-            <div v-for="i in item.children" :key="i.title" class="item">
+          <div class="text-3 color-gray">
+            <div v-for="i in item.children" :key="i.title" class="m-y-2">
               {{ i.title }}
             </div>
           </div>
@@ -58,7 +58,7 @@ const list = [{
       </div>
 
       <div class="flex-1 max-md:hidden" />
-      <div class="logo-content">
+      <div class="logo-content max-md:hidden">
         <div class="logo">
           <img class="logo-collapse" src="@/assets/logo.png">
         </div>
@@ -85,9 +85,7 @@ const list = [{
         height: 100%;
       }
     }
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
+
     .platform-description {
       font-size: 1rem;
       margin: 0.4rem 0;
@@ -97,19 +95,7 @@ const list = [{
   .tial-main {
     display: flex;
     justify-content: space-between;
-    flex: 2;
-    .bottombar-wrapper {
-      width: 100%;
-      .title {
-        font-size: 1.2rem;
-      }
-      .bar-list {
-        font-size: 0.8rem;
-        .item {
-          margin: 12px 0;
-        }
-      }
-    }
+    flex: 1;
   }
 }
 </style>
