@@ -12,6 +12,6 @@ defineProps(['src', 'title', 'description']);
         {{ description }}
       </div>
     </div>
-    <img class="w-full max-h-400px" :src="src" style="object-fit: cover;">
+    <img v-bind="$attrs" class="w-full max-h-400px" :src="src" style="object-fit: cover;">
   </div>
 </template>
