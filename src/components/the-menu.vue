@@ -47,30 +47,32 @@ const items = ref([
 </script>
 
 <template>
-  <div class="max-w-1200px flex m-auto">
-    <div class="p-2">
-      <div class="bg-blue" @click="to('/')">
-        <img :src="logo" height="50px">
+  <div class="w-full bg-white position-sticky top-0 z-9">
+    <div class="max-w-1200px flex m-auto">
+      <div class="p-2">
+        <div class="bg-blue" @click="to('/')">
+          <img :src="logo" height="50px">
+        </div>
       </div>
+      <Menubar class="b-0! w-full flex-row-reverse text-4 font-600" :model="items">
+        <template #item="{ item, props, hasSubmenu, root }">
+          <a class="flex items-center" v-bind="props.action">
+            <span :class="item.icon" />
+            <t-button v-if="item.type === 'button'">{{ item.label }}</t-button>
+            <template v-else>
+              <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+                <a :href="href" v-bind="props.action" @click="navigate">
+                  <span class="ml-2">{{ item.label }}</span>
+                </a>
+              </router-link>
+              <span v-else class="ml-2">{{ item.label }}</span>
+            </template>
+            <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
+            <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
+            <i v-if="hasSubmenu" class="pi pi-angle-down" :class="[{ 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]" />
+          </a>
+        </template>
+      </Menubar>
     </div>
-    <Menubar class="b-0! w-full flex-row-reverse text-4 font-600" :model="items">
-      <template #item="{ item, props, hasSubmenu, root }">
-        <a class="flex items-center" v-bind="props.action">
-          <span :class="item.icon" />
-          <el-button v-if="item.type === 'button'" type="primary">{{ item.label }}</el-button>
-          <template v-else>
-            <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-              <a :href="href" v-bind="props.action" @click="navigate">
-                <span class="ml-2">{{ item.label }}</span>
-              </a>
-            </router-link>
-            <span v-else class="ml-2">{{ item.label }}</span>
-          </template>
-          <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
-          <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
-          <i v-if="hasSubmenu" class="pi pi-angle-down" :class="[{ 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]" />
-        </a>
-      </template>
-    </Menubar>
   </div>
 </template>
