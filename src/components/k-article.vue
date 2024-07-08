@@ -1,4 +1,5 @@
 <script setup>
+import { ArrowRightUpIcon } from 'tdesign-icons-vue-next';
 import { to } from '@/router';
 
 defineProps(['src', 'title', 'description', 'more']);
@@ -19,7 +20,10 @@ defineProps(['src', 'title', 'description', 'more']);
             <div class="text-4 p-y line-height-normal">
               {{ description }}
             </div>
-            <t-button @click="() => to(more)">
+            <t-button shape="round" variant="outline" theme="primary" @click="() => to(more)">
+              <template #icon>
+                <ArrowRightUpIcon />
+              </template>
               了解更多
             </t-button>
           </div>

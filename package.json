@@ -17,6 +17,7 @@
     "naive-ui": "^2.38.2",
     "primeicons": "7.0.0",
     "primevue": "4.0.0",
+    "tdesign-icons-vue-next": "^0.2.4",
     "tdesign-vue-next": "^1.9.7",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0"
