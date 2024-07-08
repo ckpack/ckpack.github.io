@@ -30,18 +30,18 @@ const items = ref([
     items: [
       {
         label: '公司简介',
-        route: '/about/company',
+        route: '/about',
       },
       {
         label: '加入我们',
-        route: '/about/join',
+        route: '/about',
       },
     ],
   },
   {
     type: 'button',
     label: '联系我们',
-    route: '/contact',
+    route: '/about',
   },
 ]);
 </script>
