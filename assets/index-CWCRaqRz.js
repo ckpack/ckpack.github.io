@@ -1,4 +1,4 @@
-import{r as S,g as ge,i as Et,c as h,h as pe,a as G,d as Q,F as vr,b,w as se,o as Ot,m as At,e as Fe,f as fe,j as wt,k as Te,l as dr,n as Ft,p as Se,_ as Tt}from"./index-wnA56YGI.js";/**
+import{r as S,g as ge,i as Et,c as h,h as pe,a as G,d as Q,F as vr,b,w as se,o as Ot,m as At,e as Fe,f as fe,j as wt,k as Te,l as dr,n as Ft,p as Se,_ as Tt}from"./index-Bga62WKT.js";/**
  * tdesign v1.9.7
  * (c) 2024 tdesign
  * @license MIT
@@ -182,4 +182,4 @@ import{r as S,g as ge,i as Et,c as h,h as pe,a as G,d as Q,F as vr,b,w as se,o a
  * tdesign v1.9.7
  * (c) 2024 tdesign
  * @license MIT
- */var dv=it(vv),gv=it(st);const pv="/assets/WechatIMG2-BLUHsz13.jpg",hv="/assets/WechatIMG3-DfkMaDmL.jpg",bv="/assets/WechatIMG4-AboHVlUB.jpg",yv="/assets/WechatIMG5-mrcTFf6A.jpg",mv={class:"h-500px k-center"},_v=["src"],$v={__name:"the-main",setup(e){const r=[pv,hv,bv,yv];return(t,a)=>{const n=gv,i=dv;return fe(),wt(i,{duration:300,interval:2e3},{default:Te(()=>[(fe(),dr(vr,null,Ft(r,o=>b(n,{key:o},{default:Te(()=>[Se("div",mv,[Se("img",{class:"w-full",src:o,style:{"object-fit":"contain"}},null,8,_v)])]),_:2},1024)),64))]),_:1})}}},xv={};function Cv(e,r){const t=$v;return fe(),dr("div",null,[b(t)])}const Av=Tt(xv,[["render",Cv]]);export{Av as default};
+ */var dv=it(vv),gv=it(st);const pv="/assets/WechatIMG2-BLUHsz13.jpg",hv="/assets/WechatIMG3-DfkMaDmL.jpg",bv="/assets/WechatIMG4-AboHVlUB.jpg",yv="/assets/WechatIMG5-mrcTFf6A.jpg",mv={class:"k-center max-h-500px"},_v=["src"],$v={__name:"the-main",setup(e){const r=[pv,hv,bv,yv];return(t,a)=>{const n=gv,i=dv;return fe(),wt(i,{duration:300,interval:2e3},{default:Te(()=>[(fe(),dr(vr,null,Ft(r,o=>b(n,{key:o},{default:Te(()=>[Se("div",mv,[Se("img",{class:"w-full",src:o,style:{"object-fit":"contain"}},null,8,_v)])]),_:2},1024)),64))]),_:1})}}},xv={};function Cv(e,r){const t=$v;return fe(),dr("div",null,[b(t)])}const Av=Tt(xv,[["render",Cv]]);export{Av as default};
