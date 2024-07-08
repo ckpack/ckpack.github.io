@@ -3,8 +3,16 @@ import { handleHotUpdate, routes } from 'vue-router/auto-routes'
 
 export const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: [...routes, { path: '/:pathMatch(.*)*', redirect: '/' }],
 });
+
+export function to(params) {
+  if (params?.url) {
+    window.open(params.url);
+  } else {
+    router.push(params);
+  }
+}
 
 if (import.meta.hot) {
   handleHotUpdate(router)
