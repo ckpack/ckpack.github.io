@@ -45,7 +45,7 @@ const data = [
 
   <k-wrapper>
     <div class="text-8 font-400 text-center max-md:p-y">
-      合作单位
+      合作伙伴
     </div>
     <div class="flex flex-wrap overflow-auto hover-shadow gap-1 m-y-8 justify-center">
       <t-card v-for="item in data" :key="item" bordered shadow size="small" class="flex-shrink-0">

@@ -15,15 +15,19 @@ const items = ref([
         items: [
           {
             label: '训练教学无人机TY-410M',
+            route: '/products/ty410m',
           },
           {
             label: '高级多旋翼装调飞行教学无人机',
+            route: '/products/gjdxy',
           },
           {
             label: '工业级无人机',
+            route: '/products/gyj',
           },
           {
             label: '民航局无人机驾驶员考培单元',
+            route: '/products/mhj',
           },
         ],
       },
@@ -32,6 +36,7 @@ const items = ref([
         items: [
           {
             label: '95控制器',
+            route: '/products/95',
           },
           {
             label: '38MM警用打击类无人机设备',

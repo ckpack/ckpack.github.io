@@ -7,10 +7,10 @@ defineProps(['src', 'title', 'description', 'more']);
 
 <template>
   <t-row :gutter="16" align="middle" justify="space-around">
-    <t-col :span="12" :md="5">
+    <t-col :span="12" :lg="5">
       <k-image :src="src" class="rounded-2xl m-4 rounded-2xl" />
     </t-col>
-    <t-col :span="12" :md="7">
+    <t-col :span="12" :lg="7">
       <div class="m-4">
         <div class="text-6 font-600 p-y">
           {{ title }}

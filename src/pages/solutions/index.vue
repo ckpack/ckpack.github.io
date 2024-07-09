@@ -5,7 +5,7 @@ import WechatIMG2 from '@/assets/imgs/WechatIMG2.jpg';
 <template>
   <k-wrapper>
     <t-row :gutter="16" align="middle" justify="space-around">
-      <t-col :span="12" :md="6">
+      <t-col :span="12" :lg="6">
         <div class="p-4 text-4 line-height-loose">
           <div>消防应急-灾害现场建模</div>
           <p>灾害现场，可快速进行实时二维建模；</p>
@@ -13,7 +13,7 @@ import WechatIMG2 from '@/assets/imgs/WechatIMG2.jpg';
           <p>应用：快速了解灾区现状，供应急指挥使用</p>
         </div>
       </t-col>
-      <t-col :span="12" :md="6">
+      <t-col :span="12" :lg="6">
         <k-image :src="WechatIMG2" />
       </t-col>
     </t-row>

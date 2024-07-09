@@ -10,6 +10,6 @@ defineProps(['src', 'title', 'description']);
       </div>
       <div class="text-6" v-html="description" />
     </div>
-    <img v-bind="$attrs" class="w-full max-h-400px" :src="src" style="object-fit: cover;">
+    <img v-bind="$attrs" class="w-full max-h-400px" :src="src">
   </div>
 </template>
