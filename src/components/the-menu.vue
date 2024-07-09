@@ -56,7 +56,6 @@ const items = ref([
   },
   {
     label: '解决方案',
-    route: '/solution',
     items: [
       {
         label: '灾害现场建模',
@@ -71,7 +70,6 @@ const items = ref([
   },
   {
     label: '服务介绍',
-    route: '/service',
     items: [
       {
         label: '无人机培训',
