@@ -8,9 +8,7 @@ defineProps(['src', 'title', 'description']);
       <div class="text-8 p-b">
         {{ title }}
       </div>
-      <div class="text-6">
-        {{ description }}
-      </div>
+      <div class="text-6" v-html="description" />
     </div>
     <img v-bind="$attrs" class="w-full max-h-400px" :src="src" style="object-fit: cover;">
   </div>

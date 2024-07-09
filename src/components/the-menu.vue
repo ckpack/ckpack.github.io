@@ -1,42 +1,93 @@
 <script setup>
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 import logo from '@/assets/logo.png';
 import { to } from '@/router';
+
+const route = useRoute();
 
 const items = ref([
   {
     label: '产品中心',
-    route: '/pro',
+    items: [
+      {
+        label: '民用产品',
+        items: [
+          {
+            label: '训练教学无人机TY-410M',
+          },
+          {
+            label: '高级多旋翼装调飞行教学无人机',
+          },
+          {
+            label: '工业级无人机',
+          },
+          {
+            label: '民航局无人机驾驶员考培单元',
+          },
+        ],
+      },
+      {
+        label: '军用产品',
+        items: [
+          {
+            label: '95控制器',
+          },
+          {
+            label: '38MM警用打击类无人机设备',
+          },
+          {
+            label: '集群系列',
+          },
+          {
+            label: '靶机系列',
+          },
+        ],
+      },
+      {
+        label: '系统平台',
+        items: [
+          {
+            label: '定制化无人机应用管理平台',
+          },
+        ],
+      },
+    ],
   },
   {
     label: '解决方案',
-    route: '/solutions',
+    route: '/solution',
+    items: [
+      {
+        label: '灾害现场建模',
+      },
+      {
+        label: '土方量计算',
+      },
+      {
+        label: '复杂城区',
+      },
+    ],
+  },
+  {
+    label: '服务介绍',
+    route: '/service',
+    items: [
+      {
+        label: '无人机培训',
+      },
+      {
+        label: '校企合作',
+      },
+    ],
   },
   {
     label: '合作案例',
     route: '/cases',
   },
   {
-    label: '服务支持',
-    route: '/service',
-  },
-  {
-    label: '新闻动态',
-    route: '/news',
-  },
-  {
     label: '关于我们',
     route: '/about',
-    items: [
-      {
-        label: '公司简介',
-        route: '/about',
-      },
-      {
-        label: '加入我们',
-        route: '/about',
-      },
-    ],
   },
   {
     type: 'button',
@@ -58,13 +109,12 @@ const items = ref([
         <template #item="{ item, props, hasSubmenu, root }">
           <a class="flex items-center" v-bind="props.action">
             <span :class="item.icon" />
-            <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+            <router-link v-slot="{ href, navigate }" :to="item.route || ''" custom>
               <a :href="href" v-bind="props.action" @click="navigate">
                 <t-button v-if="item.type === 'button'">{{ item.label }}</t-button>
-                <span v-else>{{ item.label }}</span>
+                <span v-else :class="{ 'color-blue': route.path.startsWith(item.route) }">{{ item.label }}</span>
               </a>
             </router-link>
-            <span v-else>{{ item.label }}</span>
             <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
             <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
             <i v-if="hasSubmenu" class="pi pi-angle-down" :class="[{ 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]" />

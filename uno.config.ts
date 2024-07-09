@@ -1,6 +1,7 @@
 import { defineConfig } from 'unocss';
 
 export default defineConfig({
+  safelist: ['color-blue'],
   shortcuts: {
     'k-ellipsis': 'whitespace-nowrap overflow-hidden text-ellipsis',
     'k-full': 'w-full h-full',

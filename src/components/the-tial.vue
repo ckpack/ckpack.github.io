@@ -32,11 +32,11 @@ const list = [{
 }, {
   title: '联系我们',
   children: [{
-    title: '地址: 天津',
+    title: '地址: 天津空港经济区经二路225号 <br/> 中国民航科技产业化基地B座一楼无人机服务中心',
   }, {
-    title: '电话: +86 1xxxxxxxxxx',
+    title: '电话: 18910880466',
   }, {
-    title: '邮箱：xxx@email.com',
+    title: '邮箱: firstlph@163.com',
   }],
 }]
 </script>
@@ -45,14 +45,12 @@ const list = [{
   <div class="w-full bg-black z-9 p-y-24">
     <div class="tial-content max-w-1200px flex m-auto">
       <div class="tial-main max-md:p-x-6">
-        <div v-for="item in list" :key="item.title" class="bottombar-wrapper">
+        <div v-for="item in list" :key="item.title" class="bottombar-wrapper flex-1">
           <div class="text-5 color-white">
             {{ item.title }}
           </div>
           <div class="text-3 color-gray">
-            <div v-for="i in item.children" :key="i.title" class="m-y-2">
-              {{ i.title }}
-            </div>
+            <div v-for="i in item.children" :key="i.title" class="m-y-2" v-html="i.title" />
           </div>
         </div>
       </div>
